@@ -1,0 +1,17 @@
+/* 공통 CSS */
+* { box-sizing:border-box; }
+body{ font-family:'Nanumsquare','Noto Sans kr', '굴림'; font-size:16px; }
+::selection{ background-color:#9AD2FA; }
+a{ text-decoration:none; color:#666; }
+
+
+.hide{ text-indent:-10000px; }
+.center{
+    width:1280px;
+    margin:0 auto;
+}
+.clearfix:after{
+    content:'';
+    display:block;
+    clear:both;
+}
