@@ -1,8 +1,10 @@
 /* 공통 CSS */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800;900&display=swap');
+
 * { box-sizing:border-box; }
 h1,h2,h3,h4,h5,h6,p{transform:skew(-1deg);}
 body{ font-family:'Nanumsquare','Noto Sans kr', '굴림'; font-size:16px; }
-::selection{ background-color:#9AD2FA; }
+::selection{ background-color:#fdd4e2; }
 a{ text-decoration:none; color:#666; }
 
 
@@ -22,18 +24,15 @@ a{ text-decoration:none; color:#666; }
 
 /* warn-bar layout*/
 .warn{ 
-    padding:7px;
+    padding:7px; margin-top:-32px;
     height:35px;
     background: linear-gradient(90deg, rgba(251,122,148,1) 0%, rgba(150,214,255,1) 100%);
     font-size:1em;
-    color:#fff;
-    text-align:center;
-    display:flex;
-    align-items:center;
+    color:#fff; text-align:center;
+    display:flex; align-items:center;
     text-shadow: 1px 1px 2px #baa7a7;
-    box-shadow:none;
-    margin-top:-32px;
     transition:margin 0.5s ease-out;
+    position:relative; z-index:99;
 }
 .warn img { 
     width:20px; background-color:#fff;
@@ -48,9 +47,8 @@ a{ text-decoration:none; color:#666; }
 /* warn-toggle btn control */
 #warn-btn{
     text-indent:-10000px;
-    position:absolute; width:100%;
-    height:5px;
-    top:0;right:0;
+    position:absolute; top:30px;right:0;
+    width:100%; height:5px;
 }
 #warn-btn::before,#warn-btn::after{
     content:''; 
@@ -66,18 +64,12 @@ a{ text-decoration:none; color:#666; }
 #warn-btn::after{ transform:rotate(135deg); }
 
 /* checked : toggle open */
-#warn-toggle:checked~.warn{
-    margin-top:0;
-    /* box-shadow:1px 3px 3px #c9b6d0; */
-}
-#warn-toggle:checked~.warn #warn-btn {
-    right:25px;
-    width:35px; height:35px;
-}
+#warn-toggle:checked~.warn{ margin-top:0; }
+#warn-toggle:checked~.warn #warn-btn { right:25px; width:35px; height:35px; }
 #warn-toggle:checked~.warn #warn-btn::before,#warn-toggle:checked~.warn #warn-btn::after {
-    visibility:visible;
-    opacity:1;
+    visibility:visible; opacity:1;
     transition:0.7s ease-out;
+    top:-22px;
 }
 
 /***************************  Header  ***************************/
@@ -89,31 +81,19 @@ header{
     position:relative; z-index:99;
 }
 header > div {
-    display:flex;
-    justify-content:space-between;
+    display:flex; justify-content:space-between;
     padding:20px 0;
 }
-header h1 a{
-    font-size:2em; font-weight:bold;
-    color:#7e7e7e;
-}
-header h1 a img{
-    width:60px;
-    vertical-align:middle;
-}
+header h1 a{ font-size:2em; font-weight:bold; color:#7e7e7e; }
+header h1 a img{ width:60px; vertical-align:middle; }
 header nav ul{
     padding:20px 0;
-    display:flex;
-    justify-content:space-between;
+    display:flex; justify-content:space-between;
 }
 header nav > ul > li { margin-left:30px; position:relative; }
-header nav > ul > li > a { 
-    font-size:1.2em;
-    position:relative;
-}
+header nav > ul > li > a { font-size:1.2em; position:relative; }
 header nav > ul > li::before {
-    content:'';
-    display:block;
+    content:''; display:block;
     position:absolute;
     top:50%; left:50%;
     width:0px; height:0px;
@@ -141,7 +121,7 @@ header nav > ul > li:last-child { position:static; }
     width:27px; height:2px;
     background-color:#7c7c7c;
     position:absolute;
-    top:-2px;right:0px;
+    top:-2px; right:0px;
     box-shadow: 0px 10px 0px #7c7c7c;
     transition:.1s ease-out;
     
@@ -180,10 +160,9 @@ header nav > ul > li:last-child { position:static; }
 header nav #menu-all {
     visibility:hidden;
     opacity:0;
-    height:0;
+    width:100%; height:0;
     position:absolute;
-    top:100px; left:0;
-    width:100%; 
+    top:100px; left:0; 
     background-color:rgb(231,231,231,0.75);
     transition:top 0.5s ease-out;
     border-bottom:1px solid #dfdfdf;
@@ -201,8 +180,7 @@ header nav #menu-all .depth1 > li > a {
     transition: padding 0.4s ease, background-color 0.2s ease;
 }
 header nav #menu-all .depth1 > li > a:before{
-    content:"· ";
-    color:rgb(251, 66, 66);
+    content:"· "; color:rgb(251, 66, 66);
 }
 /* depth1 hover */
 header nav #menu-all .depth1 > li:hover > a { 
@@ -211,9 +189,8 @@ header nav #menu-all .depth1 > li:hover > a {
     color:#fff;
 }
 header nav #menu-all .depth1 > li:hover > a:before{
-    content:'';
+    content:''; display:block;
     width:25px; height:1px; 
-    display:block;
     position:relative;
     top:8px; left:-34px;
     background-color:#fff;
@@ -225,8 +202,7 @@ header nav #menu-all .depth1 > li:hover .depth2{
 /* depth2 */
 header nav #menu-all .depth2 { display:block; }
 header nav #menu-all .depth2 li a { 
-    font-size:1.05em;
-    font-style:italic;
+    font-size:1.05em; font-style:italic;
     text-shadow:1px 1px 2px #ffffff;
     display:inline-block;
     padding:0px 0px 0px 15px;
@@ -234,17 +210,15 @@ header nav #menu-all .depth2 li a {
     position:relative;
 }
 header nav #menu-all .depth2 li a::before{
-    content:'';
+    content:''; display:block;
     width:0; height:6px;
-    display:block;
     position:absolute;
     bottom:0px;left:12px;
     transition:all 0.3s ease;
 }
 /* depth2 hover */
 header nav #menu-all .depth2 li a:hover{
-    font-weight:bold;
-    color:#26094d;
+    font-weight:bold; color:#26094d;
 }
 header nav #menu-all .depth2 li a:hover::before{
     content:'';
@@ -252,4 +226,35 @@ header nav #menu-all .depth2 li a:hover::before{
     display:block;
     background-color:rgb(190,182,216,0.5);
     transform:skewX(40deg);
+}
+/***************************  Sub page  ***************************/
+.subtitle { padding:70px 0 60px 0; text-align:center; }
+.subtitle h2::before{
+    content:''; display:block;
+    width:35px; height:35px;
+    background:#c6ddee;
+    border-radius:100%;
+    position:absolute;
+    top:-15px; left:-20px;
+    z-index:-1;
+}
+.subtitle h2 {
+    position:relative; display:inline-block;
+    font-size:1.8em; font-weight:1000;
+}
+
+/***************************  Footer  ***************************/
+footer{
+    background-color:#f7f7f7;
+    padding:50px 0 40px;
+    text-align:center;
+    color:#666;
+    font-size:1.1em;
+}
+footer .copy{
+    display:inline-block;
+    margin-top:10px;
+    color:#999;
+    font-style:italic;
+    font-size:0.8em;
 }
