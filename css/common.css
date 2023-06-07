@@ -1,5 +1,6 @@
 /* 공통 CSS */
 * { box-sizing:border-box; }
+h1,h2,h3,h4,h5,h6,p{transform:skew(-1deg);}
 body{ font-family:'Nanumsquare','Noto Sans kr', '굴림'; font-size:16px; }
 ::selection{ background-color:#9AD2FA; }
 a{ text-decoration:none; color:#666; }
@@ -14,4 +15,241 @@ a{ text-decoration:none; color:#666; }
     content:'';
     display:block;
     clear:both;
+}
+/***************************  warn bar  ***************************/
+/* hide warn-toggle checkbox */
+#warn-toggle {display:none;}
+
+/* warn-bar layout*/
+.warn{ 
+    padding:7px;
+    height:35px;
+    background: linear-gradient(90deg, rgba(251,122,148,1) 0%, rgba(150,214,255,1) 100%);
+    font-size:1em;
+    color:#fff;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    text-shadow: 1px 1px 2px #baa7a7;
+    box-shadow:none;
+    margin-top:-32px;
+    transition:margin 0.5s ease-out;
+}
+.warn img { 
+    width:20px; background-color:#fff;
+    vertical-align:middle;
+    border-radius:100%;
+}
+.warn p{
+    display:inline-block;
+    vertical-align:middle;
+}
+
+/* warn-toggle btn control */
+#warn-btn{
+    text-indent:-10000px;
+    position:absolute; width:100%;
+    height:5px;
+    top:0;right:0;
+}
+#warn-btn::before,#warn-btn::after{
+    content:''; 
+    opacity:0; visibility:hidden;
+    transition:0.7s ease-in;
+    width:2px; height:18px;
+    background-color:#fff;
+    border-radius:10px;
+    position:absolute;
+    top:8px; left:15px;
+}
+#warn-btn::before { transform:rotate(45deg); }
+#warn-btn::after{ transform:rotate(135deg); }
+
+/* checked : toggle open */
+#warn-toggle:checked~.warn{
+    margin-top:0;
+    /* box-shadow:1px 3px 3px #c9b6d0; */
+}
+#warn-toggle:checked~.warn #warn-btn {
+    right:25px;
+    width:35px; height:35px;
+}
+#warn-toggle:checked~.warn #warn-btn::before,#warn-toggle:checked~.warn #warn-btn::after {
+    visibility:visible;
+    opacity:1;
+    transition:0.7s ease-out;
+}
+
+/***************************  Header  ***************************/
+/* Header layout */
+header{
+    height:100px;
+    border-bottom:1px solid #ccc;
+    box-shadow:0px 0px 7px #c9b6d0;
+    position:relative; z-index:99;
+}
+header > div {
+    display:flex;
+    justify-content:space-between;
+    padding:20px 0;
+}
+header h1 a{
+    font-size:2em; font-weight:bold;
+    color:#7e7e7e;
+}
+header h1 a img{
+    width:60px;
+    vertical-align:middle;
+}
+header nav ul{
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+}
+header nav > ul > li { margin-left:30px; position:relative; }
+header nav > ul > li > a { 
+    font-size:1.2em;
+    position:relative;
+}
+header nav > ul > li::before {
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%; left:50%;
+    width:0px; height:0px;
+    border-radius:100%;
+    transform:translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.05);
+    transition:0.2s ease-out;
+}
+header nav > ul > li > a:hover { color:#000; }
+header nav > ul > li:hover::before { width:40px; height:25px; }
+header nav > ul > li:last-child::before {display: none !important;}
+header nav > ul > li:last-child { position:static; }
+/* menu-all btn */
+#menu-all-btn {
+    margin-left:30px;
+    position:relative;
+    width:36px; height:20px;
+    display:block;
+    cursor: pointer;
+}
+/* hamburger btn */
+#menu-all-btn::before{
+    content:'';
+    display:block;
+    width:27px; height:2px;
+    background-color:#7c7c7c;
+    position:absolute;
+    top:-2px;right:0px;
+    box-shadow: 0px 10px 0px #7c7c7c;
+    transition:.1s ease-out;
+    
+}
+#menu-all-btn::after{
+    content:'';
+    display:block;
+    width:27px; height:2px;
+    background-color:#7c7c7c;
+    position:absolute;
+    bottom:0px;right:0px;
+    transition:.1s ease-out;
+}
+
+
+/* hide menu-toggle */
+#menu-toggle { display:none; }
+#menu-toggle:checked~#menu-all {
+    visibility:visible;
+    opacity:1;
+    height:250px;
+    transition:all 0.3s ease;
+}/* X button */
+#menu-toggle:checked~#menu-all-btn::before{
+    box-shadow:none;
+    width:29px; top:8px;
+    transform:rotate(45deg);
+    transition:.2s ease-out;
+}
+#menu-toggle:checked~#menu-all-btn::after{
+    width:29px; top:8px;
+    transform:rotate(-45deg);
+    transition:.2s ease-out;
+}
+/***************************  menu-all  ***************************/
+header nav #menu-all {
+    visibility:hidden;
+    opacity:0;
+    height:0;
+    position:absolute;
+    top:100px; left:0;
+    width:100%; 
+    background-color:rgb(231,231,231,0.75);
+    transition:top 0.5s ease-out;
+    border-bottom:1px solid #dfdfdf;
+    box-shadow:0px 3px 3px rgba(192, 176, 198, 0.3);
+}
+
+/* depth1 */
+header nav #menu-all .depth1 > li > a { 
+    width:160px;
+    display:block; 
+    padding:6px 10px 5px 15px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size:1.1em;
+    transition: padding 0.4s ease, background-color 0.2s ease;
+}
+header nav #menu-all .depth1 > li > a:before{
+    content:"· ";
+    color:rgb(251, 66, 66);
+}
+/* depth1 hover */
+header nav #menu-all .depth1 > li:hover > a { 
+    padding-left:30px;
+    background-color: rgb(252,160,178,0.5);
+    color:#fff;
+}
+header nav #menu-all .depth1 > li:hover > a:before{
+    content:'';
+    width:25px; height:1px; 
+    display:block;
+    position:relative;
+    top:8px; left:-34px;
+    background-color:#fff;
+}
+header nav #menu-all .depth1 > li:hover .depth2{
+    margin-top:-1px;
+}
+
+/* depth2 */
+header nav #menu-all .depth2 { display:block; }
+header nav #menu-all .depth2 li a { 
+    font-size:1.05em;
+    font-style:italic;
+    text-shadow:1px 1px 2px #ffffff;
+    display:inline-block;
+    padding:0px 0px 0px 15px;
+    margin-bottom:10px;
+    position:relative;
+}
+header nav #menu-all .depth2 li a::before{
+    content:'';
+    width:0; height:6px;
+    display:block;
+    position:absolute;
+    bottom:0px;left:12px;
+    transition:all 0.3s ease;
+}
+/* depth2 hover */
+header nav #menu-all .depth2 li a:hover{
+    font-weight:bold;
+    color:#26094d;
+}
+header nav #menu-all .depth2 li a:hover::before{
+    content:'';
+    width:100%; height:6px;
+    display:block;
+    background-color:rgb(190,182,216,0.5);
+    transform:skewX(40deg);
 }
