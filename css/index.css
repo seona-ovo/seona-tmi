@@ -51,13 +51,13 @@
 }
 
 
-#main1  #visual > ul > li:nth-child(2){
+#main2 > div {
+    margin:30px auto;
+    height:200px; border-radius:15px;
     background: linear-gradient(65deg, rgb(254, 182, 199) 0%,rgb(249,233,214) 20%,rgb(224,243,255) 61%,rgb(239, 211, 242) 100%);
 }
-#main1  #visual > ul > li:nth-child(3){
-    display:block;
+#main3 > div {
+    margin:30px auto 80px;
+    height:400px; border-radius:15px;
     background: linear-gradient(70deg, rgb(228, 235, 172) 0%,rgb(250,255,219) 20%,rgb(255,244,224) 61%,rgb(255,204,204) 100%);
 }
-
-#main1 #visual ul li .visual-copy span{display:inline-block;}
-#main1 #visual ul li .visual-copy span:nth-child(2){ margin-right:-20px; }
