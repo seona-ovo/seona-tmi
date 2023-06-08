@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin:0; padding:0; list-style:none; box-sizing:border-box; text-decoration:none; }
+        #toggle{ display:none; }
+        #main_header{
+            height:45px;
+            background-color:#094056;
+            display:flex;
+            justify-content:space-between;
+        }
+        #main_header a, #main_header label{
+            display:inline-block;
+            height:30px; line-height:30px;
+            margin-top:7.5px;
+            padding:0 5px;
+            background-color:rgb(32, 173, 173);
+            border-radius:5px;
+            color:#fff;
+        }
+        #main_header h1{
+            color:#fff;
+        }
+        #toggle:checked ~ #wrap > #gnb_wrap { display:block; }
+        #gnb_wrap{
+            display:none;
+            border:5px solid #000;
+        }
+        #gnb_wrap #gnb ul{
+            width:80%;
+            margin:10px auto;
+            display:flex;
+            flex-wrap:wrap;
+            flex-direction:row;
+            align-items: space-between;
+        }
+        #gnb_wrap #gnb ul li{
+            flex:21%;
+            margin:2%;
+            text-align:center;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+        #gnb_wrap #gnb ul li a{
+            padding:5px;
+            display:block;
+            color:#666;
+        }
+        #lnb ul{
+            display:flex;
+        }
+        #lnb ul li{
+            width:20%;
+            border:1px solid #fff;
+            background-color:#3b748b
+        }
+        #lnb ul li a{
+            color:#fff;
+            text-align:center;
+            display:block;
+            padding:10px 0;
+        }
+        #section{
+            padding:10px;
+            color:#303030;
+        }
+        #section_body p:nth-child(1){
+            color:#3da4e8;
+            font-weight:bold;
+            font-size:1.1em;
+            padding:10px 0;
+        }
+        #section_body p:nth-child(2){
+            background-color:#ececec;
+        }
+        #footer{
+            padding:10px;
+            text-align:center;
+        }
+        #footer .logo{ 
+            border-top:1px solid #666;
+            border-bottom:1px solid #666;
+            padding:10px 0;
+        }
+        #footer .info{
+            margin-top:15px;
+            font-size:1.2em;
+            font-weight:bold;
+        }
+        #footer .addr{
+            font-size:0.9em;
+            color:#a3a3a3;
+        }
+    </style>
+</head>
+<body>
+    <input id="toggle" type="checkbox">
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#none" class="left">category</a>
+            <h1>Mobile</h1>
+            <label for="toggle" class="right" onclick="">menu</label>
+        </header>
+        <div id="gnb_wrap">
+            <div id="gnb">
+                <ul>
+                    <li><a href="#none">gnb1</a></li>
+                    <li><a href="#none">gnb2</a></li>
+                    <li><a href="#none">gnb3</a></li>
+                    <li><a href="#none">gnb4</a></li>
+                    <li><a href="#none">gnb5</a></li>
+                    <li><a href="#none">gnb6</a></li>
+                    <li><a href="#none">gnb7</a></li>
+                    <li><a href="#none">gnb8</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="lnb">
+            <ul>
+                <li><a href="#">lnb1</a></li>
+                <li><a href="#">lnb2</a></li>
+                <li><a href="#">lnb3</a></li>
+                <li><a href="#">lnb4</a></li>
+                <li><a href="#">lnb5</a></li>
+            </ul>
+        </div>
+        <div id="section">
+            <div id="section_header">
+                <h1>하이서울브랜드</h1>
+                <hr>
+            </div>
+            <div id="section_body">
+                <p>
+                    서울시가 인정한 최고의 공동브랜드 하이서울브랜드!<br>
+                    서울을 대표하는 믿을 수 있는 우수기업브랜드 하이서울이 있습니다.
+                </p>
+                <p>
+                    서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="logo">서울산업진흥원 로고</div>
+            <div class="info">서울산업진흥원</div>
+            <div class="addr">121-904 서울 마포구 월드컵북로 400(상암동)</div>
+        </div>
+    </div><!--wrap-->
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0; padding:0;
+            list-style:none;
+            text-decoration:none;
+        }
+
+        #header h1{
+            background-color:#7A3E6F;
+            color:#fff;
+            padding:25px 10px;
+        }
+        #header #gnb{
+            background-color:#2C2B2C;
+            display:flex;
+            justify-content:space-between;
+        }
+        #header #gnb ul{
+            display:flex;
+        }
+        #header #gnb ul:first-child li{
+            border-right:1px solid #777;
+        }
+        #header #gnb ul:last-child li{
+            border-left:1px solid #777;
+        }
+        
+        #header #gnb ul li a{
+            font-size:0.8em;
+            color:#fff;
+            display:block;
+            padding:15px 35px;
+        }
+        #section{
+            display:flex;
+        }
+        .lnb{
+            min-height:100vh;
+            background-color:#E4DA5E;
+        }
+        .lnb li{
+            
+            width:250px;
+            border-bottom:1px dashed rgb(165, 148, 69);
+        }
+        .lnb li a{
+            font-size:0.8em;
+            color:#696422;
+            display:block;
+            padding:7px 15px;
+        }
+        .content {
+            width:100%;
+            background-color: rgb(252,251,205);
+            padding:20px 15px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Web Site for Tablet-Pc</h1>
+        <div id="gnb">
+            <ul>
+                <li><a href="#">Btn1</a></li>
+                <li><a href="#">Btn2</a></li>
+                <li><a href="#">Btn3</a></li>
+                <li><a href="#">Btn4</a></li>
+                <li><a href="#">Btn5</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Btn6</a></li>
+                <li><a href="#">Btn7</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="section">
+        <ul class="lnb">
+            <li><a href="#">Btn1</a></li>
+            <li><a href="#">Btn2</a></li>
+            <li><a href="#">Btn3</a></li>
+            <li><a href="#">Btn4</a></li>
+            <li><a href="#">Btn5</a></li>
+            <li><a href="#">Btn6</a></li>
+            <li><a href="#">Btn7</a></li>
+            <li><a href="#">Btn8</a></li>
+            <li><a href="#">Btn9</a></li>
+        </ul>
+        <div class="content">
+            <h2>SEOUL ANIMATION CENTER</h2>
+        </div>
+    </section>
+</body>
+</html>

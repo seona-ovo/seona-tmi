@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko"">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab-menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+    <style>
+        .wrap{ width:100%; height:200vh;}
+        .center{ width:1000px; margin:0 auto; }
+        .center:after{ content:''; display:block; clear:both; }
+        /*bar menu*/
+        .con-3{ background-color:#333; padding:30px 0; margin-top:30px; }
+        .menu_wrap{ width:100%; border-top:1px solid #fff; background-color:#333; }
+        .menu_wrap .center {width:1000px; margin: 0 auto; display:flex; justify-content: center; position:relative; }
+        .menu{ width:600px; display:flex; }
+        .menu li{ width:100%; text-align:center; }
+        .menu li a { width:100%; height:100%; padding:10px 15px; display:block; text-decoration:none; color:#fff; }
+        .effect{ background-color:#fff; width:100px; height:5px; position:absolute; top:0; left:24%; transition:0.7s; }
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="con-3">
+            <div class="menu_wrap">
+                <div class="center">
+                    <ul class="menu">
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                        <li><a href="#">menu4</a></li>
+                    </ul>
+                    <div class="effect"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       
+        //bar event menu
+        var menu = document.querySelectorAll('.menu li a');
+        var bar= document.querySelector('.effect');
+
+        for(i = 0; i < menu.length; i++){
+        menu[0].addEventListener('mouseover',function(){
+            bar.style.left=('24%');
+        });
+        menu[1].addEventListener('mouseover',function(){
+            bar.style.left=('39%');
+        });
+        menu[2].addEventListener('mouseover',function(){
+            bar.style.left=('54%');
+        });
+        menu[3].addEventListener('mouseover',function(){
+            bar.style.left=('69%');
+        });
+        }
+
+    </script>
+</body>
+</html>

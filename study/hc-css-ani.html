@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="prefixfree.js"></script>
+    <style>
+        * { margin:0; padding:0; text-decoration:none; list-style:none; }
+        #wrap{position:relative;}
+        #lnb{
+            width:200px;
+            background-color:#CDCBCD;
+        }
+        #lnb li{
+            width:110px; 
+            background-color:#FFCE00; 
+            margin-bottom:1px;
+            border-radius:5px;
+        }
+        #lnb li a{
+            display:block;
+            padding:10px;
+            color:#fff;
+            text-decoration:underline;
+        }
+        #lnb li:hover{
+            animation-name:lnb;
+            animation-duration:1s;
+            animation-direction:normal;
+            animation-fill-mode: forwards;
+        }
+        #rec{
+            width:100px; height:100px;
+            line-height:100px;
+            text-align:center;
+            background-color:#ffff00;
+            position:absolute; top:250px; left:0;
+
+            animation-name:rec-to-cir;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            
+        }
+        #rec:hover{animation-play-state:paused;}
+        @keyframes lnb{
+            from{
+                width:120px;
+                background-color:#FFCE00;
+            }
+            to{
+                width:200px;
+                background-color:#a08a10;
+            }
+        }
+        @keyframes rec-to-cir{
+            from{
+                width:100px; height:100px;
+                line-height:100px;
+                background-color:#ffff00;
+                border-radius:0;
+                font-size:1em;
+                transform:rotate(0deg);
+                top:250px; left:0;
+            }
+            to{
+                width:200px; height:200px;
+                line-height:200px;
+                background-color:#A9880A;
+                border-radius:50%;
+                font-size:3em;
+                transform:rotate(360deg);
+                top:250px; left:400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="lnb">
+            <ul>
+                <li><a href="#">lnb01</a></li>
+                <li><a href="#">lnb02</a></li>
+                <li><a href="#">lnb03</a></li>
+                <li><a href="#">lnb04</a></li>
+                <li><a href="#">lnb05</a></li>
+            </ul>
+        </div>
+        <br>
+        <div id="rec">rec</div>    
+    </div>
+</body>
+</html>
