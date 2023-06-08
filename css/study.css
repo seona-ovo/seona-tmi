@@ -1,0 +1,95 @@
+
+/*************************  background layout  *************************/
+#study1 {
+    min-height:86vh;
+    padding:40px 0 80px 0;
+    background: linear-gradient(20deg, rgb(166, 223, 220) 0%, rgb(239, 238, 192) 100%);
+}
+#study1 > div {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 25px;
+    animation:study 0.3s ease-out;
+    padding:0 40px 5px;
+}
+@keyframes study {
+    0%{
+        margin-top:-30px;
+        opacity:0;
+    }   
+    100%{
+        margin-top:0px;
+        opacity:1;
+    } 
+}
+
+.study-section { 
+    opacity:0; 
+    animation:studysection 0.3s ease-out; 
+    animation-fill-mode: forwards; 
+}
+.study-section { animation-delay:.5s; }
+.study-section:nth-child(1) { animation-delay:0.1s; }
+.study-section:nth-child(2) { animation-delay:0.3s; }
+@keyframes studysection {
+    0%{ margin-top:30px;  opacity:0; }   
+    100%{ margin-top:0px; opacity:1; } 
+}
+/*************************  subtitle  *************************/
+#study1 .study-tit {
+    display:flex; justify-content:space-between;
+    align-items: end;
+    padding:0 0 10px 10px;
+    border-bottom:1px solid #c1c1c1;
+    margin-bottom:5px;
+}
+#study1 .study-tit h3::before {
+    content:''; display:inline-block;
+    vertical-align:bottom; margin-right:10px;
+}
+#study1 .study-tit h3 { font-size:2em; font-weight:bold; }
+
+/******  subtitle icon  ******/
+.study-section.hc .study-tit h3::before { 
+    width:74px;height:45px; background:url(../img/study/lang_logo.png) no-repeat; 
+}
+.study-section.js .study-tit h3::before { 
+    width:32px; height:45px; background:url(../img/study/lang_logo.png) no-repeat -84px 0px; 
+}
+.study-section.il h3::before { 
+    width:36px; height:35px; background:url(../img/study/i_logo.png) no-repeat; 
+}
+.study-section.ps h3::before { 
+    width:36px; height:35px; background:url(../img/study/p_logo.png) no-repeat; 
+}
+
+.study-section .more-btn {
+    width:20px; text-align:center;
+    display:block;
+    color:#aaa; font-size:24px;
+}
+/*************************  content layout  *************************/
+.study-section-wrap { display:flex; justify-content:space-between; }
+.study-section.half { width:48%; }
+
+/* gallery */
+.study-gallery {
+    display:flex; flex-wrap:wrap;
+    margin-bottom:50px;
+}
+.study-gallery li { 
+    width:19.5%;height:200px; margin:0.25%; 
+    overflow:hidden; position:relative; 
+}
+.study-gallery li img { 
+    position:absolute; top:50%; left:50%; 
+    min-width:100%; min-height:100%; max-width:120%; 
+    transform:translate(-50%,-50%);
+}
+/* list */
+.study-list { margin-bottom:50px; }
+.study-list li {
+    border-bottom:1px dashed #ccc;
+    padding:7px;
+}
+.study-list li a { display:block; font-size:1.2em; color:#777; }
+.study-list li a:hover { color:#FCA0B2 }

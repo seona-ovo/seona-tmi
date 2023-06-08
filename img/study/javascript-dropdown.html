@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko"">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab-menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+    <style>
+        .wrap{ width:100%; height:200vh;}
+        .center{ width:1000px; margin:0 auto; }
+        .center:after{ content:''; display:block; clear:both; }
+
+        /*gnb dropdown*/
+        .header{ width:100%; text-align:center; background-color:hotpink; }
+        .header h1{ color:#fff; padding:20px; }
+        .gnbwrap { width:100%; background-color:#000; }
+        .gnb { display:flex; }
+        .gnb>li{ width:100%; height:42px; position:relative; }
+        .gnb>li a{ width:100%; height:100%; display:block; transition:0.15s ease-in; text-decoration:none; color:#fff; padding:10px; }
+        
+        .gnb .depth2 { position:absolute; top:42px; left:0; width:100%; background-color:#666;  border-radius:0 0 7px 7px; display:none; transition:ease-in 0.1s; padding-bottom:5px; z-index:1; }
+        .gnb .depth2 a { padding:5px;}
+        .gnb .depth2 a:hover { color:hotpink; text-decoration:underline; }
+
+        .gnb>li.on>a{ color:pink; }
+        .gnb>li.on .depth2{ display:block; }
+
+        /*tab menu*/
+        .con-1 { margin-top:30px; height:200px; }
+        .tab_menu { position:relative; }
+        .tab_menu .list { overflow:hidden; display:flex; }
+        .tab_menu .list li { padding:5px; }
+        .tab_menu .list a { text-decoration:none; color:#333; transition:0.1s ease; }
+        .tab_menu .list a:hover { color:#000; text-decoration:underline; }
+        .tab_menu .list p { position:absolute; top:30px; left:0; padding:30px 10px; background:#333; color:white; width:320px; display:none; }
+        .tab_menu .list .is_on a { color:coral; }
+
+        .tab_menu .list .is_on p { display:block; }
+        
+        /*modal*/
+        .con-2 { margin-top:30px; }
+        .modal_bg { width:100%; height:100%; display:block; position:absolute; top:0; left:0; background-color:rgba(0,0,0,0.5); display:none; }
+        .modal_show {display:block;}
+        .modal_con{ position:absolute; top:50%; left:50%; transform:translate(-200px, -250px); width:400px; height:500px; background-color:#fff; border-radius:20px; padding:30px; }
+        .modal_close{position:absolute; top:0px; right:15px; cursor:pointer; }
+        .modal_close:after{font-size:40px; content:"\00d7";}
+
+        /*bar menu*/
+        .con-3{ background-color:#333; padding:30px 0; margin-top:30px; }
+        .menu_wrap{ width:100%; border-top:1px solid #fff; background-color:#333; }
+        .menu_wrap .center {width:1000px; margin: 0 auto; display:flex; justify-content: center; position:relative; }
+        .menu{ width:600px; display:flex; }
+        .menu li{ width:100%; text-align:center; }
+        .menu li a { width:100%; height:100%; padding:10px 15px; display:block; text-decoration:none; color:#fff; }
+        .effect{ background-color:#fff; width:100px; height:5px; position:absolute; top:0; left:24%; transition:0.7s; }
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="center">
+                <h1>Dropdown EX</h1>
+            </div>
+            <div class="gnbwrap">
+                <ul class="gnb center">
+                    <li>
+                        <a href="#">menu1</a>
+                        <ul class="depth2">
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">menu2</a>
+                        <ul class="depth2">
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">menu3</a>
+                        <ul class="depth2">
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">menu4</a>
+                        <ul class="depth2">
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--gnbwrap-->
+        </header>
+        <div class="con-1 center">
+            <div class="tab_menu">
+                <ul class="list">
+                <li class="is_on">
+                    <a href="#tab1" class="btn">Tab button 1</a>
+                    <p id="tab1">Tab content 1</p>
+                </li>
+                <li>
+                    <a href="#tab2" class="btn">Tab button 2</a>
+                    <p id="tab2">Tab content 2</p>
+                </li>
+                <li>
+                    <a href="#tab3" class="btn">Tab button 3</a>
+                    <p id="tab3">Tab content 3</p>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="con-2 center">
+            <div class="cont">
+                add your text
+                <div class="modal_open">보기</div>
+            </div>
+            <div class="modal_bg">
+                <div class="modal_con">
+                    text 
+                    <div class="modal_close"></div>
+                </div>
+            </div>
+        </div>
+        <div class="con-3">
+            <div class="menu_wrap">
+                <div class="center">
+                    <ul class="menu">
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                        <li><a href="#">menu4</a></li>
+                    </ul>
+                    <div class="effect"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //dropdown
+        const drop = document.querySelectorAll('.gnb>li');
+        for(var i = 0; i < drop.length; i++){
+            drop[i].addEventListener("mouseover", function(){
+            for(var j = 0; j < drop.length; j++){
+                drop[j].classList.remove('on');
+            };
+            this.classList.add('on');
+            });
+            drop[i].addEventListener("mouseleave", function(){
+            for(var j = 0; j < drop.length; j++){
+                drop[j].classList.remove('on');
+            }
+            })
+        }
+        //tab menu
+        const tabList = document.querySelectorAll('.tab_menu .list li');
+        for(var i = 0; i < tabList.length; i++){
+        tabList[i].querySelector('.btn').addEventListener('click', function(e){
+            e.preventDefault(); //a태그가 링크로 동작하는것을 막음
+            for( j = 0; j < tabList.length; j++){
+            tabList[j].classList.remove('is_on');
+            };
+            this.parentNode.classList.add('is_on');
+        });
+        }
+
+        //modal
+        var modal = document.querySelector('.modal_bg');
+        var openbtn = document.querySelector('.modal_open');
+        var closebtn = document.querySelector('.modal_close');
+
+        openbtn.addEventListener("click", function(){ 
+        modal.classList.add('modal_show');
+        });
+
+        closebtn.addEventListener("click", function(){ 
+        modal.classList.remove('modal_show');
+        });
+
+        //bar event menu
+        var menu = document.querySelectorAll('.menu li a');
+        var bar= document.querySelector('.effect');
+
+        for(i = 0; i < menu.length; i++){
+        menu[0].addEventListener('mouseover',function(){
+            bar.style.left=('24%');
+        });
+        menu[1].addEventListener('mouseover',function(){
+            bar.style.left=('39%');
+        });
+        menu[2].addEventListener('mouseover',function(){
+            bar.style.left=('54%');
+        });
+        menu[3].addEventListener('mouseover',function(){
+            bar.style.left=('69%');
+        });
+        }
+
+    </script>
+</body>
+</html>

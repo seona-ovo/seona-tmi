@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko"">
+<head>
+    <meta charset="UTF-8">
+    <title>Img Hover Motion</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+    <style>
+        *{ margin:0; padding:0; box-sizing:border-box;}
+        .wrap{ width:100vw; height:100vh; }
+        .images-hover-box{ width:100%; height:100%;}
+        .images{ width:100%; height:100%; display:flex; }
+        .images li{ width:100%; height:100%; overflow:hidden; transition: 1s ease; }
+        .images li a { width:100%; height:100%; display:block; color:#fff; text-decoration:none; font-size:2rem; padding:80vh 0 0 3vw; background-size:cover; background-attachment:fixed; box-shadow:3px 0px 7px inset #333; font-weight:bold; }
+        .images li:hover{width:1800vw;}
+        .img1{background-image:url(img/beach-1236581_1280.jpg);}
+        .img2{background-image:url(img/people-2562102_1280.jpg);}
+        .img3{background-image:url(img/road-3186188_1280.jpg);}
+        .img4{background-image:url(img/sunset-2080072_1280.jpg);}
+        .img5{background-image:url(img/sea-540123_1280.jpg);}
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="images-hover-box">
+            <ul class="images">
+                <li><a class="img1" href="#">Beach</a></li>
+                <li><a class="img2" href="#">Couple</a></li>
+                <li><a class="img3" href="#">Road</a></li>
+                <li><a class="img4" href="#">Mountain</a></li>
+                <li><a class="img5" href="#">Cliff</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

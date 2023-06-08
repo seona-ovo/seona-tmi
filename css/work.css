@@ -1,0 +1,10 @@
+#work1 {
+    min-height:86vh;
+    padding:40px 0 80px 0;
+    background: linear-gradient(20deg, rgb(230, 222, 252) 0%, rgb(255, 225, 225) 100%);
+}
+#work1 > div {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 25px;
+    padding:0 20px 5px 20px;
+}

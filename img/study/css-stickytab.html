@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Tab Example</title>
+    <style>
+        ::selection{background-color:coral; color:#fff;}
+        *{margin:0;padding:0;list-style:none; text-decoration:none; box-sizing:border-box; }
+        html{scroll-behavior:smooth;}
+        .wrap{width:1280px; margin:0 auto;}
+        header{background:#555; text-align:center; color:#fff; padding:20px; text-transform:uppercase;}
+        .top{width:100%; height:50vh; background-color:#ececec; margin: 40px 0; text-align: center; line-height:50vh; }
+        .tab-box {width:100%; position:sticky; top:0;}
+        .tab-box ul {width:100%; display:flex; border-top:2px solid #555;}
+        .tab-box li {width:100%; border:1px solid #ccc; background-color:#fafafa;}
+        .tab-box li a {color:#333; display:block; text-align:center; padding:10px; }
+
+        .contents{width:100%; height:100vh; padding:30px;}
+        #cont-1{background-color:antiquewhite;}
+        #cont-2{background-color:antiquewhite;}
+        #cont-3{background-color:antiquewhite;}
+        #cont-4{background-color:antiquewhite;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1> Sticky Tab Example</h1>
+        </header>
+        <div class="top">
+            상품 상세 설명
+        </div>
+        <div class="tab-box">
+            <ul class="sticky-tab">
+                <li><a href="#cont-1">상품상세</a></li>
+                <li><a href="#cont-2">상품평</a></li>
+                <li><a href="#cont-3">상품문의</a></li>
+                <li><a href="#cont-4">배송/교환/반품 안내</a></li>
+            </ul>
+        </div>
+        <div class="content-box">
+            <div class="contents" id="cont-1">
+                상품상세 내용
+            </div>
+            <div class="contents" id="cont-2">
+                상품평 내용
+            </div>
+            <div class="contents" id="cont-3">
+                상품문의 내용
+            </div>
+            <div class="contents" id="cont-4">
+                배송/교환/반품 안내
+            </div>
+        </div>
+    </div>
+</body>
+</html>
