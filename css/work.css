@@ -1,0 +1,109 @@
+
+/*************************  background layout  *************************/
+#work1 {
+    min-height:86vh;
+    padding:40px 0 80px 0;
+    background: linear-gradient(20deg, rgb(235, 215, 232) 0%, rgb(255, 219, 219) 100%);
+}
+#work1 > div {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 25px;
+    animation:study 0.3s ease-out;
+    padding:0 40px 5px;
+}
+@keyframes study {
+    0%{
+        margin-top:-30px;
+        opacity:0;
+    }   
+    100%{
+        margin-top:0px;
+        opacity:1;
+    } 
+}
+
+.work-section { 
+    opacity:0; 
+    animation:worksection 0.3s ease-out; 
+    animation-fill-mode: forwards; 
+}
+.work-section { animation-delay:.7s; }
+.work-section:nth-child(1) { animation-delay:0.1s; }
+.work-section:nth-child(2) { animation-delay:0.3s; }
+@keyframes worksection {
+    0%{ margin-top:30px;  opacity:0; }   
+    100%{ margin-top:0px; opacity:1; } 
+}
+/*************************  subtitle  *************************/
+#work1 .work-tit { 
+    display:flex; justify-content:space-between;
+    align-items: end;
+    padding:0 0 10px 10px;
+    border-bottom:1px solid #c1c1c1;
+    margin-bottom:5px;
+}
+#work1 .work-tit h3::before {
+    content:'·'; display:inline-block;
+    vertical-align:bottom; margin-right:10px;
+    color:#BBB;
+}
+#work1 .work-tit h3 { font-size:2em; font-weight:bold; }
+
+/******  subtitle icon  ******/
+
+
+.work-section .more-btn {
+    width:20px; text-align:center;
+    display:block;
+    color:#aaa; font-size:24px;
+}
+/*************************  content layout  *************************/
+.work-section-wrap { display:flex; justify-content:space-between; }
+.work-section.half { width:48%; }
+
+/* gallery */
+.work-gallery, .work-gallery2 {
+    display:flex; flex-wrap:wrap;
+    margin-bottom:50px;
+}
+.work-gallery li { 
+    width:19.5%;height:200px; margin:0.25%; 
+    overflow:hidden; position:relative; 
+}
+.work-gallery2 li { 
+    width:19.5%;height:300px; margin:0.25%; 
+    overflow:hidden; position:relative; 
+}
+.work-gallery li img,.work-gallery2 li img { 
+    position:absolute; top:50%; left:50%; 
+    min-width:100%; min-height:100%; max-width:100%; 
+    transform:translate(-50%,-50%);
+}
+.work-gallery li img.top{
+    top:0; left:0;
+    transform:translateY(0);
+}
+/* list */
+.work-list { 
+    height:240px; overflow:auto; 
+    z-index:1; position:relative;
+    
+}
+.work-list li {
+    border-bottom:1px dashed #ccc;
+    padding:10px;
+}
+.work-list::after{
+    content:''; display:block;
+    height:30px;
+}
+.work-list li a { display:block; font-size:1.2em; color:#777; }
+.work-list li a:hover { color:#FCA0B2 }
+/* 더보기 버튼 */
+.list-more{
+    height:70px;
+    margin-top:-50px;
+    margin-bottom:40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(253,247,249)60%);
+    z-index:2; position:relative;
+}
