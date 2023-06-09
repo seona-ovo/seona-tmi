@@ -35,7 +35,7 @@
     100%{ margin-top:0px; opacity:1; } 
 }
 /*************************  subtitle  *************************/
-#study1 .study-tit {
+#study1 .study-tit { 
     display:flex; justify-content:space-between;
     align-items: end;
     padding:0 0 10px 10px;
