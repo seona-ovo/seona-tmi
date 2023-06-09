@@ -86,26 +86,10 @@
     transform:translate(-50%,-50%);
 }
 /* list */
-.study-list { 
-    height:240px; overflow:auto; 
-    z-index:1; position:relative;
-    
-}
+.study-list { margin-bottom:50px; }
 .study-list li {
     border-bottom:1px dashed #ccc;
-    padding:10px;
-}
-.study-list::after{
-    content:''; display:block;
-    height:30px;
+    padding:7px;
 }
 .study-list li a { display:block; font-size:1.2em; color:#777; }
 .study-list li a:hover { color:#FCA0B2 }
-/* 더보기 버튼 */
-.list-more{
-    height:70px;
-    margin-top:-50px;
-    margin-bottom:40px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(247,251,244) 60%);
-    z-index:2; position:relative;
-}
