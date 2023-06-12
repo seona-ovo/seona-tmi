@@ -1,11 +1,11 @@
 
 /*************************  background layout  *************************/
-#study1 {
+#study1, #study2 {
     min-height:86vh;
     padding:40px 0 80px 0;
     background: linear-gradient(20deg, rgb(166, 223, 220) 0%, rgb(239, 238, 192) 100%);
 }
-#study1 > div {
+#study1 > div, #study2 > div {
     background-color: rgba(255,255,255,0.8);
     border-radius: 25px;
     animation:study 0.3s ease-out;
@@ -70,6 +70,7 @@
 /*************************  content layout  *************************/
 .study-section-wrap { display:flex; justify-content:space-between; }
 .study-section.half { width:48%; }
+.study-section.lists { width:31%; }
 
 /* gallery */
 .study-gallery {
@@ -100,7 +101,7 @@
     height:30px;
 }
 .study-list li a { display:block; font-size:1.2em; color:#777; }
-.study-list li a:hover { color:#FCA0B2 }
+.study-list li a:hover { color:#000; }
 /* 더보기 버튼 */
 .list-more{
     height:70px;
@@ -109,3 +110,47 @@
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(247,251,244) 60%);
     z-index:2; position:relative;
 }
+
+/* Sub page */
+
+/* list */
+.study-list2 { 
+    z-index:1; position:relative;
+    
+}
+.study-list2 li {
+    border-bottom:1px dashed #ccc;
+    padding:10px;
+}
+.study-list2::after{
+    content:''; display:block;
+    height:30px;
+}
+.study-list2 li a { display:block; font-size:1.2em; color:#777; }
+.study-list2 li a:hover { color:#000; }
+
+.study-list2 label:hover { color:#000; }
+.study-list2 .list-title {
+    font-size:22px; font-weight:bold;
+    border-bottom:2px solid #ddd;
+}
+
+/* 토글메뉴 */
+
+.study-list2 label { position:relative; display:block; font-size:1.2em; color:#777; transition:all 0.2s ease-in; }
+.study-list2 label:after{ 
+    content:''; display:block;
+    width:20px; height:20px;
+    background:url(../img/toggle-arrow.jpg) no-repeat center / 20px auto;
+    position:absolute; top:0; right:0;
+}
+
+.toggle{ display:none; }
+.togglemenu {
+    margin-bottom:-11px;
+    background-color:#f7f7f7;
+    margin-top:10px;
+    display:none;
+}
+
+.toggle:checked~.togglemenu{ display:block;}
