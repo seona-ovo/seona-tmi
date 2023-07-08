@@ -1,0 +1,219 @@
+@import url(./font.css);
+@import url(./reset.css);
+
+/****** common ******/
+.wrapper{
+    min-width:1740px;
+}
+.blind{
+    position: absolute;   
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+.common-inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/****** header ******/
+.group-header{
+    display: flex;
+    position: relative;
+    width: 1740px;
+    margin: 0 auto;
+    height: 85px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo{margin-top: -6px;}
+.header .logo a{
+    display: block;
+    width: 97px; height: 51px;
+    background: url(../images/logo.png);
+    margin-left: 4px;
+}
+.header:before{
+    display: block;
+    height: 40px;
+    background: #f3f3f3;
+    content:'';
+}
+.header .util-menu{
+    display: flex;
+    position: absolute;
+    top:0; right: 0;
+    margin-top: -40px;
+    line-height: 40px;
+    font-family: var(--font-en);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    justify-content: end;
+    gap:33px;
+}
+.header .right-menu{
+    display: flex;
+    margin-right: 1px;
+    gap: 31px;
+}
+.header .right-menu a {
+    display: block;
+    width: 25px;height: 25px;
+}
+.header .right-menu a.cart{background: url(../images/ic_cart.png) no-repeat center;}
+.header .right-menu a.search{background: url(../images/ic_search.png) no-repeat center;}
+.header .right-menu a.allmenu{background: url(../images/ic_menu.png) no-repeat center;}
+
+/*** gnb  ***/
+.gnb{
+    width: 920px;
+    margin:0 274px 0 306px;
+}
+.gnb .nav-list{
+    display: flex;
+    justify-content: space-between;
+}
+.gnb .nav{
+    position: relative;
+    display: block;
+    height:85px;
+    font-family: var(--font-en);
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height:85px;
+    border-bottom: 2px solid transparent;
+    transition:all 0.4s;
+}
+/* .gnb .nav:hover {
+    border-bottom: 2px solid #000;
+} */
+.gnb .nav::after{
+    position: absolute;
+    bottom:23px; right:0;
+    display: block;
+    width: 0px; height: 2px;
+    background: #000;
+    content:'';
+    transition:all 0.3s;
+}
+.gnb .nav.on::after{
+    width: 100%;
+    left:0;
+}
+
+/****** depth2 ******/
+.depth2{
+    display:none;
+    position:absolute;
+    top: 85px; 
+    padding-left:5px;
+    z-index:1;
+}
+.depth2 ul{
+    display: flex;
+    gap: 25px;
+}
+.depth2 li a{
+    font-size: 14px;
+    line-height: 50px;
+    color:#fff;
+}
+
+/****** footer ******/
+.footer{
+    background: #000;
+    color:#fff;
+}
+.footer .group-top{
+    border-bottom:1px solid #262626;
+    color: #fffefe;
+}
+.footer .group-top .common-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.footer .menu-area{
+    display: flex;
+    gap: 31px;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+}
+.footer .menu-area a{
+    position: relative;
+}
+.footer .menu-area a::after{
+    display: block;
+    position: absolute;
+    top: 2px; right: -15px;
+    width: 1px; height: 12px;
+    background: #959595;
+    content:'';
+}
+.footer .menu-area a:last-child::after{
+    display: none;
+}
+.footer .family-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px; height: 40px;
+    background: #202020;
+    padding: 0 14px 0 16px;
+}
+.footer .family-area .title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.footer .family-area .link-more{
+    width: 24px; height: 24px;
+    background: url(../images/footer_more.png) no-repeat;
+}
+
+.footer .group-bottom{
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .customer-area{
+    display: flex;
+    align-items: center;
+    margin-top: 33px;
+    letter-spacing: -0.05em;
+}
+.footer .customer-area em {
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 55px;
+}
+.footer .customer-area span {
+    margin-right:17px;
+}
+
+.footer .addr-area{
+    margin-top: 24px;
+    color: #fffefe;
+}
+.footer .addr-area p{
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.01em
+}
+.footer .addr-area p.copy{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.001em;
+}
+.footer .addr-area a.mail{
+    letter-spacing: 0.00em
+}
+.footer .addr-area span{
+    margin-right: 34px;
+}
+
+.footer .service-box {
+    margin: 56px 27px 0 0;
+}
