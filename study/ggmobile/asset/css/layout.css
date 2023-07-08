@@ -1,0 +1,158 @@
+@import url(./font.css);
+@import url(./reset.css);
+
+/******* common *******/
+body{
+    background: #ccc;
+}
+.wrapper{ 
+    max-width: 1025px;
+    margin: 0 auto;
+    background: #fff;
+ }
+
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+.headline{
+    font-family: var(--font-en);
+    font-size: 20px;
+    font-weight:500;
+    text-align: center;
+}
+.link-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 40px;
+    border: 1px solid #222;
+}
+#skipTop{
+    position: fixed;
+    z-index:1;
+    right:10px ;bottom:17px;
+    background: rgba(0,0,0,0.8) ;
+    border-radius: 50%;
+}
+#skipTop a{
+    display: block;
+    width: 30px; height: 30px;
+    background: url(../images/m_top.png) no-repeat 50% 10px / 14px 9px;
+}
+
+/******* header *******/
+
+.header{
+    position: relative;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    z-index:999;
+}
+.header .logo{
+    position: absolute;
+    top:50%;left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .logo img{
+    height: 17px;
+}
+
+.header .btn{
+    width: 25px;
+    height: 23px;
+}
+
+.header .btn.menu img{
+    width: 25px;
+}
+
+
+/******* footer *******/
+
+.sns-area{
+    height: 80px;
+    background: #d71609;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.sns-area a{
+    width: 35px;
+    height: 35px;
+}
+
+.group-footer{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 35px 20px 33px;
+    background: #aaaaaa;
+}
+
+/* customer */
+
+.footer .group-customer{
+    width: 200px;
+    height:100px;
+    margin: 0 auto;
+    border: 2px solid rgba(255,255,255,0.5);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+.footer .group-customer h3{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-en);
+}
+.footer .group-customer p{
+    margin-top: 9px;
+}
+.footer .group-customer a{
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 14px;
+    font-family: var(--font-en);
+    white-space:nowrap;
+}
+
+/* info */
+
+.footer .group-info {
+    margin-top: 41px;
+}
+.footer .logo {
+    width: 135px;
+    height: 17px;
+    background: url(../images/m_f_logo.png) no-repeat center / 100%;
+}
+.footer .addr-area {
+    margin-top:19px;
+    color: #fff;
+}
+.footer .addr {
+    line-height: 18px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.footer .bar {
+    width: 1px; height: 11px;
+    background: #fff;
+}
+.footer .copy {
+    line-height: 18px;
+    margin-top: 18px;
+}

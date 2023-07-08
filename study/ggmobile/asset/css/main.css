@@ -1,0 +1,221 @@
+/****** sc-visual ******/
+.sc-visual .swiper img {
+    width:100%;
+}
+.sc-visual .pagination{
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    position: absolute;
+    bottom: 33px;
+    z-index: 1;
+}
+.sc-visual .pagination .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    border:1px solid #fff;
+    background: none;
+    opacity: 1;
+    margin: 0;
+}
+.sc-visual .pagination .swiper-pagination-bullet-active{
+    background: #fff;
+}
+
+/****** sc-intro ******/
+
+.sc-intro{
+    padding:0 10px;
+}
+.sc-intro .headline{
+    font-family: var(--font-en);
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin: 38px 0 17px;
+}
+.sc-intro .img-box img{
+    width: 100%;
+}
+.sc-intro .desc{
+    text-align:justify;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 19px 0 21px;
+}
+
+.sc-intro .link-detail{
+    margin: 0 auto;
+}
+
+/****** sc-recomm ******/
+.sc-recomm .headline{
+    margin: 40px 0 19px;
+}
+
+.sc-recomm .content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 45px 20px;
+}
+.sc-recomm .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    z-index:-1;
+}
+.sc-recomm .bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-recomm .text-box{
+    color: #fff;
+    min-height:200px;
+    padding: 21px 15px 49px;
+    background: rgba(0,0,0,0.7);
+}
+.sc-recomm .text-box a {
+    display: block;
+ }
+
+.sc-recomm .title{
+    font-size: 16px;
+}
+.sc-recomm .desc{
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align:justify;
+}
+
+/****** sc-event ******/
+
+.sc-event{
+    margin-top: 40px;
+    padding: 0 35px;
+}
+
+.sc-event img{
+    width: 100%;
+}
+
+.sc-event .event-item {
+    margin-top: 40px;
+}
+
+.sc-event .text-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+.sc-event .text-box em {
+    font-weight:400;
+    color:#858585;
+}
+.sc-event .title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sc-event .desc {
+    margin: 10px 0 21px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sc-review {
+    padding: 0 35px;
+}
+.sc-review .headline{
+    margin: 38px 0 22px;
+}
+.sc-review .title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+.sc-review .desc{
+    font-size: 13px;
+    line-height: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    margin: 8px 0 16px;
+}
+.sc-review .link-detail{
+    margin: 0 auto;
+}
+/* pagination */
+.sc-review .pagination{
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    margin-top:32px;
+}
+.sc-review .pagination .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    border:1px solid #ddd;
+    background: none;
+    opacity: 1;
+    margin: 0;
+}
+.sc-review .pagination .swiper-pagination-bullet-active{
+    background: #ddd;
+}
+
+/****** sc-board ******/
+.group-board{
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 60px;
+}
+.sc-board{
+    padding: 0 20px;
+    position: relative;
+}
+.sc-board .more {
+    position: absolute;
+    top: 10px;  right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/ic_plus.png) no-repeat center / 100% 100%;
+}
+.sc-board .more img{
+    width: 100%;
+}
+
+.sc-board .headline-sm{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+    border-bottom: 2px solid #dddddd;
+}
+.board-item a{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 51px;
+    overflow: hidden;
+    line-height: 51px;
+    border-bottom: 1px solid #ddd;
+}
+.board-item .date {
+    color: #888;
+}
+.board-item .text {
+    flex: 1;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
