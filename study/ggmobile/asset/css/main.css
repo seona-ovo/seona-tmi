@@ -54,17 +54,9 @@
 }
 
 .sc-recomm .content{
-    position: relative;
     width: 100%;
     height: 100%;
     padding: 45px 20px;
-}
-.sc-recomm .bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0; left: 0;
-    z-index:-1;
 }
 .sc-recomm .content:nth-child(2){background: url(../images/m_recomm1.jpg) center / cover;}
 .sc-recomm .content:nth-child(3){background: url(../images/m_recomm2.jpg) center / cover;}
