@@ -232,6 +232,7 @@
 }
 .sc-comm .img-box a{
     position: relative;
+    height:100%;
 }
 .sc-comm .img-box a::after{
     display: block;
